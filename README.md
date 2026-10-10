@@ -1,3 +1,36 @@
+# Data Analyst Job Analysis with SQL and PostgreSQL
+
+![SQL](https://img.shields.io/badge/SQL-PostgreSQL-blue) ![Git](https://img.shields.io/badge/Version%20control-Git%20%26%20GitHub-lightgrey)
+
+Five SQL queries on a PostgreSQL database of data analyst job postings. They find the top-paying remote roles, the skills those roles ask for, the most requested skills, the skills linked to higher pay, and the skills that are both in demand and well paid.
+
+## Key findings
+
+- The top 10 paying remote analyst roles range from **$184,000 to $650,000**.
+- **SQL appears in 8 of those 10 roles**, followed by Python (7) and Tableau (6).
+- Most requested skills for remote analyst jobs: **SQL (7,291 postings)**, Excel (4,611), Python (4,330), Tableau (3,745) and Power BI (2,609).
+- Specialised tools such as PySpark, Bitbucket and Couchbase carry the highest average salaries.
+- Cloud skills (Snowflake, Azure, AWS, BigQuery) combine solid demand with average salaries of about **$108K to $113K**.
+
+## Repository guide
+
+| Folder | What is in it |
+| --- | --- |
+| `sql_load/` | Scripts that create the database and tables, in order (1 to 3) |
+| `project_sql/` | The five analysis queries, one file per question |
+| `Advanced SQL/` | Practice queries: table changes, dates, CASE, unions and problems |
+| `Assets/` | Charts used in this README |
+
+## How to run it
+
+1. Install PostgreSQL and create a database with `sql_load/1_create_database.sql`.
+2. Create and load the tables with `sql_load/2_create_tables.sql` and `3_modify_tables.sql`.
+3. Run the files in `project_sql/` in order.
+
+The data comes from [Luke Barousse's SQL course](https://lukebarousse.com/sql).
+
+---
+
 # Introduction
 Dive into the data job market! Focusing on data analyst roles, this project explores top-paying jobs, in-demand skills, and where high demand meets high salary in data analytics.
 
@@ -58,7 +91,7 @@ Here's the breakdown of the top data analyst jobs in 2023:
 - **Job Title Variety:** There's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specializations within data analytics.
 
 ![Top Paying Roles](Assets/top_10_highest_paying_roles_hd.png)
-*Bar graph visualizong the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results*
+*Bar graph visualizing the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results*
 
 ### 2. Skills for Top Paying Jobs
 To understand what skills are required for the top-paying jobs, I joined the job postings with the skills data, providing insights into what employers value for high-compensation roles.
@@ -100,7 +133,7 @@ Here's the breakdown of the most demanded skills for the top 10 highest-paying d
 - Other valuable skills include **R, Snowflake, Pandas, and Excel**, each showing varying degrees of demand.
 
 ![Top Demanded Skills](Assets/top_10_demanded_skills_hd.png)
-*Bar graph visualizong the count of skills for the top 10 paying jobs for data analysts; ChatGPT generated this graph from my SQL query results*
+*Bar graph visualizing the count of skills for the top 10 paying jobs for data analysts; ChatGPT generated this graph from my SQL query results*
 
 ### 3. In-Demand Skills for Data Analysts
 This query helped identify the skills most frequently requested in job postings, directing focus to areas with high demand.
@@ -281,7 +314,7 @@ From the analysis, several general insights emerged:
 
 3. **Most In-Demand Skills**: SQL is also the most demanded skill in the data analyst job market, thus making it essential for job seekers.
 
-4. **Skills with Higher Salaries**: Specialized skills, such as SVN and Solidity, are associated with the highest average salaries, indicating a premium on niche expertise.
+4. **Skills with Higher Salaries**: Specialised skills such as PySpark, Bitbucket and Couchbase are associated with the highest average salaries, indicating a premium on niche expertise.
 
 5. **Optimal Skills for Job Market Value**: SQL leads in demand and offers for a high average salary, positioning it as one of the most optimal skills for data analysts to learn to maximize their market value.
 
